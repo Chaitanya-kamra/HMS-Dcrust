@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "603326501148",
+    "firebase_url": "https://hostel-management-27a7f-default-rtdb.firebaseio.com",
+    "project_id": "hostel-management-27a7f",
+    "storage_bucket": "hostel-management-27a7f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:603326501148:android:7e894cc5dbdc4760c7aad9",
+        "android_client_info": {
+          "package_name": "com.chaitanya.hms_dcrust"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPQYGFB_SHaKa_mO-qM0bxbJ-PUaq2gv0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

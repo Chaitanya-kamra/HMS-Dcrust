@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".views.fragments.ComplainFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvComplaints"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/ComplainFab"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_margin="16dp"
+        android:layout_gravity="bottom|right"
+        android:text="Add Complaint"
+        app:iconTint ="@null"
+        app:strokeWidth="2dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:drawablePadding="2dp"
+        app:strokeColor="@color/white"
+        android:backgroundTint="#242424"
+        android:textColor="@color/white"
+        app:shapeAppearance="@style/fab_shape"
+        android:paddingVertical="7dp"
+        app:iconPadding="5dp"
+        app:iconSize="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:icon="@drawable/baseline_add_24"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

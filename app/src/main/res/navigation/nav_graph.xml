@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.chaitanya.hms_dcrust.views.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_loginFragment2"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.chaitanya.hms_dcrust.views.fragments.ChatFragment"
+        android:label="fragment_chat"
+        tools:layout="@layout/fragment_chat" />
+    <fragment
+        android:id="@+id/complainFragment"
+        android:name="com.chaitanya.hms_dcrust.views.fragments.ComplainFragment"
+        android:label="fragment_complain"
+        tools:layout="@layout/fragment_complain" />
+    <fragment
+        android:id="@+id/feesFragment"
+        android:name="com.chaitanya.hms_dcrust.views.fragments.FeesFragment"
+        android:label="fragment_fees"
+        tools:layout="@layout/fragment_fees" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.chaitanya.hms_dcrust.views.fragments.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.chaitanya.hms_dcrust.views.fragments.LoginFragment"
+        android:label="LoginFragment" >
+        <action
+            android:id="@+id/action_loginFragment2_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+</navigation>

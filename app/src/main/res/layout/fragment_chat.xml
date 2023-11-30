@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RadioGroup
+        android:id="@+id/radioGroupFilter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:orientation="horizontal"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/filterAll"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:paddingHorizontal="10dp"
+            android:layout_marginStart="5dp"
+            android:checked="true"
+            android:text="All"
+            android:textSize="14sp" android:textColor="@drawable/drawable_tab_text_color_selector"
+            android:button="@null"
+            android:background="@drawable/drawable_tab_selector"/>
+
+        <RadioButton
+            android:id="@+id/filterNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:paddingHorizontal="10dp"
+            android:layout_marginStart="5dp"
+            android:text="Normal"
+            android:textSize="14sp" android:textColor="@drawable/drawable_tab_text_color_selector"
+            android:button="@null"
+            android:background="@drawable/drawable_tab_selector"/>
+
+        <RadioButton
+            android:id="@+id/filterLost"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:paddingHorizontal="10dp"
+            android:layout_marginStart="5dp"
+            android:text="Lost/Found"
+            android:textSize="14sp" android:textColor="@drawable/drawable_tab_text_color_selector"
+            android:button="@null"
+            android:background="@drawable/drawable_tab_selector"/>
+
+        <RadioButton
+            android:id="@+id/filterImportant"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:paddingHorizontal="10dp"
+            android:layout_marginStart="5dp"
+            android:text="Important"
+            android:textSize="14sp" android:textColor="@drawable/drawable_tab_text_color_selector"
+            android:button="@null"
+            android:background="@drawable/drawable_tab_selector"/>
+
+
+    </RadioGroup>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvMessage"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@id/radioGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/radioGroupFilter"
+        app:reverseLayout="true"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/lnlAdd"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RadioButton
+            android:id="@+id/radioButtonNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            app:buttonTint="#133d59"
+            android:text="Normal" />
+        <RadioButton
+            android:id="@+id/radioButtonLostFound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:buttonTint="#133d59"
+            android:text="Lost/Found" />
+
+        <RadioButton
+            android:id="@+id/radioButtonImportant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Important"
+            app:buttonTint="#133d59"/>
+
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/lnlAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <EditText
+            android:id="@+id/etMessage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btAdd"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/baseline_send_24"
+            android:backgroundTint="#133d59"
+            />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
