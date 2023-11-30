@@ -84,7 +84,7 @@ class ChatFragment : Fragment() {
         }
         binding.btAdd.setOnClickListener {
             if (!binding.etMessage.text.isNullOrEmpty()) {
-                val message = Message("User1", binding.etMessage.text.toString(),type, getFormattedTime(System.currentTimeMillis()))
+                val message = Message(viewModel.userData?.name.toString(), binding.etMessage.text.toString(),type, getFormattedTime(System.currentTimeMillis()))
                 viewModel.sendMessage(message)
                 binding.etMessage.text.clear()
                 binding.rvMessage.scrollToPosition(0)
